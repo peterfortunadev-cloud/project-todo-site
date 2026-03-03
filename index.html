@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peter's Project TODO</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: radial-gradient(circle at top, #2f3a78 0%, #0b1124 70%);
+        color: #f5f7ff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 1rem;
+      }
+
+      main {
+        width: min(540px, 100%);
+        background: rgba(12, 14, 28, 0.9);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 24px;
+        padding: 2.25rem;
+        box-shadow: 0 20px 40px rgba(3, 6, 20, 0.75);
+        backdrop-filter: blur(14px);
+      }
+
+      .tagline {
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        color: rgba(255, 255, 255, 0.75);
+        margin: 0 0 0.35rem 0;
+      }
+
+      h1 {
+        margin: 0 0 0.5rem 0;
+        font-size: 2.4rem;
+        line-height: 1.1;
+      }
+
+      .intro {
+        margin: 0 0 1.75rem 0;
+        color: rgba(255, 255, 255, 0.75);
+        font-size: 1rem;
+      }
+
+      .todo-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .todo-item {
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+        padding: 1.1rem 1.2rem;
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        transition: border 0.2s ease;
+      }
+
+      .todo-item:hover {
+        border-color: rgba(255, 255, 255, 0.25);
+      }
+
+      .dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        margin-top: 4px;
+        flex-shrink: 0;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+      }
+
+      .dot.open {
+        background: #5dd39e;
+        border-color: #5dd39e;
+      }
+
+      .dot.pending {
+        border-color: rgba(255, 255, 255, 0.3);
+        background: transparent;
+      }
+
+      .todo-item strong {
+        display: block;
+        font-size: 1.1rem;
+      }
+
+      .todo-item p {
+        margin: 0.2rem 0 0;
+        color: rgba(255, 255, 255, 0.65);
+        font-size: 0.95rem;
+      }
+
+      footer {
+        margin-top: 1.75rem;
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.55);
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="tagline">projects</p>
+      <h1>Project To‑Do</h1>
+      <p class="intro">
+        A quiet list ready for the projects you want to work on. Mostly blank today, so you can fill in the good
+        ideas only when they land.
+      </p>
+      <ul class="todo-list">
+        <li class="todo-item">
+          <span class="dot open"></span>
+          <div>
+            <strong>Idea vault scaffold</strong>
+            <p>Sketch a lightweight system for capturing future project sparks—start with the basics here.</p>
+          </div>
+        </li>
+        <li class="todo-item">
+          <span class="dot pending"></span>
+          <div>
+            <strong>—</strong>
+            <p>keep this slot empty until a new project arrives.</p>
+          </div>
+        </li>
+        <li class="todo-item">
+          <span class="dot pending"></span>
+          <div>
+            <strong>—</strong>
+            <p>waiting for the next bold idea</p>
+          </div>
+        </li>
+        <li class="todo-item">
+          <span class="dot pending"></span>
+          <div>
+            <strong>—</strong>
+            <p>reserve this space for whatever feels most important</p>
+          </div>
+        </li>
+      </ul>
+      <footer>Updated automatically by your assistant.</footer>
+    </main>
+  </body>
+</html>
